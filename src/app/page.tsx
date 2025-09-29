@@ -6,6 +6,8 @@ import { defaultStudyOverviewData } from "@/data/study-overview";
 import { defaultStudyPlanData } from "@/data/study-plan";
 import { mixedQuestions } from "@/data/questions";
 import { defaultKnowledgeMapData } from "@/data/knowledge-map";
+import { StudentCard } from "@/components/StudentCard";
+import { defaultStudents } from "@/data/students";
 
 export default function Home() {
   return (
@@ -13,6 +15,14 @@ export default function Home() {
       <StudyOverview data={defaultStudyOverviewData} fullHeight={false} />
       <StudyPlanOverview data={defaultStudyPlanData} />
       <KnowledgeMap data={defaultKnowledgeMapData} className="rounded-2xl border border-border shadow" />
+
+      <section className="mx-auto max-w-7xl space-y-6 px-6">
+        <div className="flex items-center gap-2">
+          <div className="h-3 w-3 rounded-full bg-primary" />
+          <h2 className="text-xl font-semibold text-foreground">学生卡片</h2>
+        </div>
+        <StudentCard students={defaultStudents} />
+      </section>
 
       <section className="mx-auto max-w-7xl space-y-6 px-6">
         <div className="flex items-center gap-2">
