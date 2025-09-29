@@ -15,9 +15,13 @@ import { defaultInfoAction } from "@/data/info-action";
 import { Info } from "@/components/Info";
 import { defaultInfo } from "@/data/info";
 import { ResourceCoverage } from "@/components/ResourceCoverage";
-import { defaultResourceCoverage } from "@/data/resource-coverage";
+import { ResourceStatistics } from "@/components/ResourceStatistics";
 import { LearningCoverage } from "@/components/LearningCoverage";
 import { defaultLearningCoverage } from "@/data/learning-coverage";
+import { defaultResourceCoverage } from "@/data/resource-coverage";
+import { defaultResourceStatistics } from "@/data/resource-statistics";
+import { ClassOverview } from "@/components/ClassOverview";
+import { defaultClassOverviewData } from "@/data/class-overview";
 
 export default function Home() {
   return (
@@ -25,6 +29,14 @@ export default function Home() {
       <StudyOverview data={defaultStudyOverviewData} fullHeight={false} />
       <StudyPlanOverview data={defaultStudyPlanData} />
       <KnowledgeMap data={defaultKnowledgeMapData} className="rounded-2xl border border-border shadow" />
+
+      <section className="mx-auto max-w-7xl space-y-6 px-6">
+        <div className="flex items-center gap-2">
+          <div className="h-3 w-3 rounded-full bg-blue-500" />
+          <h2 className="text-xl font-semibold text-foreground">班级学习总览</h2>
+        </div>
+        <ClassOverview data={defaultClassOverviewData} />
+      </section>
 
       <section className="mx-auto max-w-7xl space-y-6 px-6">
         <div className="flex items-center gap-2">
@@ -40,6 +52,14 @@ export default function Home() {
           <h2 className="text-xl font-semibold text-foreground">资源覆盖度</h2>
         </div>
         <ResourceCoverage data={defaultResourceCoverage} />
+      </section>
+
+      <section className="mx-auto max-w-7xl space-y-6 px-6">
+        <div className="flex items-center gap-2">
+          <div className="h-3 w-3 rounded-full bg-slate-500" />
+          <h2 className="text-xl font-semibold text-foreground">资源统计总览</h2>
+        </div>
+        <ResourceStatistics data={defaultResourceStatistics} />
       </section>
 
       <section className="mx-auto max-w-7xl space-y-6 px-6">
