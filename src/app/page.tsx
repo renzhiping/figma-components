@@ -1,36 +1,30 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import KnowledgeMap from "@/components/study-overview/KnowledgeMap";
+import { StudyOverview } from "@/components/study-overview/StudyOverview";
+import { StudyPlanOverview } from "@/components/study-plan/StudyPlanOverview";
+import { QuestionCard } from "@/components/questions/QuestionCard";
+import { defaultStudyOverviewData } from "@/data/study-overview";
+import { defaultStudyPlanData } from "@/data/study-plan";
+import { mixedQuestions } from "@/data/questions";
+import { defaultKnowledgeMapData } from "@/data/knowledge-map";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-background via-background to-muted p-6 font-sans">
-      <Card className="max-w-md w-full shadow-lg">
-        <CardHeader>
-          <CardTitle className="text-3xl">Hello World</CardTitle>
-          <CardDescription>使用 shadcn/ui + Tailwind CSS 构建的示例页面</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4 text-base text-muted-foreground">
-          <p>
-            这是一个简单的展示页面，演示如何在 Next.js 应用中整合 shadcn/ui
-            组件库与 Tailwind CSS。
-          </p>
-          <p>你可以继续添加更多组件，快速构建现代化的界面。</p>
-        </CardContent>
-        <CardFooter className="flex items-center justify-between">
-          <CardAction>
-            <Button size="lg">开始探索</Button>
-          </CardAction>
-          <Button variant="ghost">了解更多</Button>
-        </CardFooter>
-      </Card>
+    <div className="space-y-16 bg-background pb-16">
+      <StudyOverview data={defaultStudyOverviewData} fullHeight={false} />
+      <StudyPlanOverview data={defaultStudyPlanData} />
+      <KnowledgeMap data={defaultKnowledgeMapData} className="rounded-2xl border border-border shadow" />
+
+      <section className="mx-auto max-w-7xl space-y-6 px-6">
+        <div className="flex items-center gap-2">
+          <div className="h-3 w-3 rounded-full bg-primary" />
+          <h2 className="text-xl font-semibold text-foreground">练习题示例</h2>
+        </div>
+        <div className="space-y-4">
+          {mixedQuestions.map((question) => (
+            <QuestionCard key={question.id} question={question} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
