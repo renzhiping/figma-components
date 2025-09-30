@@ -37,11 +37,27 @@ export const singleChoiceQuestions: SingleChoiceQuestionData[] = [
             "useState 是 React 最基础的 Hook，用于在函数组件中添加状态管理能力。",
         userAnswer: "B",
     },
+    {
+        id: 3,
+        type: "单选题",
+        title: "以下哪个 HTML 标签用于定义无序列表？",
+        options: [
+            { id: "A", text: "<ol>" },
+            { id: "B", text: "<ul>" },
+            { id: "C", text: "<li>" },
+            { id: "D", text: "<dl>" },
+        ],
+        difficulty: "简单",
+        points: 4,
+        correctAnswer: "B",
+        explanation: "<ul> 标签表示无序列表，<ol> 表示有序列表，<li> 表示列表项，<dl> 用于定义列表。",
+        userAnswer: "B",
+    },
 ];
 
 export const fillInBlankQuestions: FillInBlankQuestionData[] = [
     {
-        id: 3,
+        id: 4,
         type: "填空题",
         title: "JavaScript 中用于声明常量的关键字是 ______。",
         difficulty: "简单",
@@ -52,7 +68,7 @@ export const fillInBlankQuestions: FillInBlankQuestionData[] = [
         userAnswer: "const",
     },
     {
-        id: 4,
+        id: 5,
         type: "填空题",
         title: "CSS 中让块级元素水平居中的常用写法是 ______。",
         difficulty: "中等",
