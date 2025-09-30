@@ -12,7 +12,7 @@ interface Option {
     text: string;
 }
 
-export interface MultipleChoiceQuestionData {
+export interface SingleChoiceQuestionData {
     id: number;
     type: string;
     title: string;
@@ -24,11 +24,11 @@ export interface MultipleChoiceQuestionData {
     userAnswer?: string;
 }
 
-interface MultipleChoiceQuestionProps {
-    question: MultipleChoiceQuestionData;
+interface SingleChoiceQuestionProps {
+    question: SingleChoiceQuestionData;
 }
 
-export function MultipleChoiceQuestion({ question }: MultipleChoiceQuestionProps) {
+export function SingleChoiceQuestion({ question }: SingleChoiceQuestionProps) {
     const [selectedAnswer, setSelectedAnswer] = useState<string>(
         question.userAnswer || "",
     );

@@ -1,8 +1,8 @@
 import type { FillInBlankQuestionData } from "@/components/questions/FillInBlankQuestion";
-import type { MultipleChoiceQuestionData } from "@/components/questions/MultipleChoiceQuestion";
+import type { SingleChoiceQuestionData } from "@/components/questions/SingleChoiceQuestion";
 import type { QuestionData } from "@/components/questions/QuestionCard";
 
-export const multipleChoiceQuestions: MultipleChoiceQuestionData[] = [
+export const singleChoiceQuestions: SingleChoiceQuestionData[] = [
     {
         id: 1,
         type: "单选题",
@@ -65,7 +65,7 @@ export const fillInBlankQuestions: FillInBlankQuestionData[] = [
 ];
 
 export const mixedQuestions: QuestionData[] = [
-    ...multipleChoiceQuestions,
+    ...singleChoiceQuestions,
     ...fillInBlankQuestions,
 ];
 

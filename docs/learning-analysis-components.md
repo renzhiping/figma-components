@@ -6,6 +6,95 @@
   "description": "分析学生的知识点掌握情况，并提供建议和相关资源。",
   "cards": [
     {
+      "card_title": "学习总览",
+      "components": [
+        {
+          "component_type": "StudyOverview",
+          "data": {
+            "header": {
+              "title": "AI 课程学习总览",
+              "accentClassNames": [
+                "bg-blue-500",
+                "bg-green-500",
+                "bg-purple-500"
+              ]
+            },
+            "stats": [
+              {
+                "id": "mastery",
+                "label": "知识掌握度",
+                "value": "67%",
+                "description": "掌握 6/9 个重点模块",
+                "valueClassName": "text-green-600"
+              },
+              {
+                "id": "progress",
+                "label": "课程进度",
+                "value": "45%",
+                "description": "完成 9/20 个核心知识点",
+                "valueClassName": "text-blue-600"
+              },
+              {
+                "id": "time",
+                "label": "本周学习时长",
+                "value": "3.5 小时",
+                "description": "超过 65% 的同学",
+                "valueClassName": "text-purple-600"
+              }
+            ],
+            "diagnosis": {
+              "buttonLabel": "薄弱诊断",
+              "buttonClassName": "bg-blue-600 text-white hover:bg-blue-700",
+              "questions": [
+                {
+                  "id": "diag-1",
+                  "label": "KP 3.2：向量距离概念",
+                  "accentClassName": "bg-blue-500"
+                },
+                {
+                  "id": "diag-2",
+                  "label": "KP 7.1：聚类分析思路",
+                  "accentClassName": "bg-green-500"
+                },
+                {
+                  "id": "diag-3",
+                  "label": "KP 7.2：K-means 迭代流程",
+                  "accentClassName": "bg-purple-500"
+                }
+              ]
+            },
+            "primaryAction": {
+              "buttonLabel": "首要行动",
+              "description": "优先完成向量距离概念回顾，并锁定本周攻坚目标",
+              "buttonClassName": "bg-green-600 text-white hover:bg-green-700"
+            },
+            "tasks": {
+              "buttonLabel": "攻坚任务",
+              "buttonClassName": "bg-purple-600 text-white hover:bg-purple-700",
+              "items": [
+                {
+                  "id": "task-video",
+                  "label": "观看向量距离精讲视频",
+                  "type": "video"
+                },
+                {
+                  "id": "task-reading",
+                  "label": "研读教材第 7.1 节",
+                  "type": "reading"
+                },
+                {
+                  "id": "task-exercise",
+                  "label": "完成 K-means 练习题",
+                  "type": "exercise"
+                }
+              ]
+            }
+          },
+          "max_width_class": "max-w-7xl"
+        }
+      ]
+    },
+    {
       "card_title": "学习概览",
       "components": [
         {

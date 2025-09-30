@@ -1,10 +1,10 @@
 import { FillInBlankQuestion } from "@/components/questions/FillInBlankQuestion";
-import { MultipleChoiceQuestion } from "@/components/questions/MultipleChoiceQuestion";
+import { SingleChoiceQuestion } from "@/components/questions/SingleChoiceQuestion";
 import { QuestionCard } from "@/components/questions/QuestionCard";
 import {
     fillInBlankQuestions,
     mixedQuestions,
-    multipleChoiceQuestions,
+    singleChoiceQuestions,
 } from "@/data/questions";
 
 export default function QuestionsDemoPage() {
@@ -21,8 +21,8 @@ export default function QuestionsDemoPage() {
                 <div className="grid gap-6 md:grid-cols-2">
                     <div className="space-y-3">
                         <h2 className="text-xl font-medium text-foreground">单选题组件</h2>
-                        {multipleChoiceQuestions.map((question) => (
-                            <MultipleChoiceQuestion key={question.id} question={question} />
+                        {singleChoiceQuestions.map((question) => (
+                            <SingleChoiceQuestion key={question.id} question={question} />
                         ))}
                     </div>
 
